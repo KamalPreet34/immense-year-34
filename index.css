@@ -57,6 +57,11 @@ cursor: pointer;
     cursor: pointer;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+#login-signup-button a{
+    color: white;
+    text-decoration: none;
+}
 #host-img{
     width: 30px;
 }
