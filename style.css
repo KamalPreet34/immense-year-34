@@ -1,0 +1,109 @@
+#main{
+    width: 35%;
+    /* display: flex; */
+    padding:15px;
+    border: 1px solid #333;
+    
+}
+
+
+
+#box1{
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+#box1 > button{
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: green;
+    background-color: white;
+}
+
+#option{
+    display: grid;
+    grid-template-columns: repeat(4,20%);
+    grid-template-rows: 70px;
+    gap: 15px;
+}
+#option img{
+    display: block;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+}
+
+#option>div{
+    border: 1px solid #333;;
+    border-radius: 3%;
+}
+#option p{
+    text-align: center;
+    font-size: 14px;
+}
+
+.container-input {
+    position: relative;
+  }
+  
+  .input {
+    width: 150px;
+    padding: 10px 0px 10px 40px;
+    border-radius: 9999px;
+    border: solid 1px #333;
+    transition: all .2s ease-in-out;
+    outline: none;
+    opacity: 0.8;
+  }
+  
+  .container-input svg {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+  }
+  
+  .input:focus {
+    opacity: 1;
+    width: 250px;
+  }
+  #car {
+    display:flex;
+    align-items: center;
+    border-top: 1px solid black;
+    margin-bottom: -25px;
+    margin-top: 5px;
+  }
+  #car img{
+    width:25px;
+    height:25px;
+    margin-right: 10px;
+  }
+ .container-input{
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+ }
+ #car1 img{
+    display: block;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+ }
+ #car1 {
+    display: grid;
+    grid-template-columns: repeat(4,20%);
+    grid-template-rows: 70px;
+    gap: 15px;
+}
+#car1 > div{
+    border: 1px solid #333;
+    border-radius: 3%;
+}
+#car2{
+    border: 1px solid red;
+}
+
+
+ 
