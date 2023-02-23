@@ -1,6 +1,7 @@
 body{
     padding: 0px;
     margin: 0px;
+    font-family: Arial;
 }
 
 #navbar{
@@ -14,6 +15,9 @@ padding: 3px 50px 3px 30px;
 #project-logo{
     width: 60px;
     cursor: pointer;
+}
+p {
+    font-weight: lighter;
 }
 #BookMyCar{
     color: white;
@@ -335,10 +339,18 @@ form span{
     width: 85%;
 
 }
+#about{
+    border-bottom: solid 2px white;
+}
 #about-us > div:nth-child(1) > span{
     padding-top: 30px;
     font-size: 20px;
-    border-bottom: solid 2px white;
+    padding-bottom: 15px;
+    cursor: pointer;
+    
+}
+#about-us h1{
+    font-size: 25px;
 }
 
 
@@ -347,9 +359,12 @@ form span{
     width: 85%;
     margin-top: 30px;
 }
+
+#about-us > div:nth-child(2) a{
+    color: white;
+}
 #about-us p{
-    font-size: 20px;
-    font-family: "Optima";
+    font-size: 15px;
     font-weight: lighter;
 }
 #locations{
