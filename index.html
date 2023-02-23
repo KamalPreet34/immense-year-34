@@ -4,81 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Rentel In Your City</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-
+    <title>Admin Login Portal</title>
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
-    <div id ="navbar">
-        <div id="left-bar">
-            <div><img id="ham-burger-icon" src="./images/icons8-menu-rounded-48.png" alt=""></div>
-            <div><img id="project-logo" src="images/project-logo.ico" alt="error"></div>
-            <div><span><h1 id="BookMyCar">BookMyCar</h1></span></div>
-        </div> 
-        <div id="right-bar">
-            <div id="host-group">
-                 <div><img id="host-img" src="./images/project-logo.ico" alt=""></div>
-                 <div><button id="host-button">Become a Host</button></div>
-            </div>
-            <div><button id="login-signup-button"><span>Login/Signup</span></button></div>
+    
+    <div id="main_div">
+    <form action="submit" id="form">
+        <div id="input_div">
+        <img src="./images/Car Logo.png" alt="">
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <!-- <button id="btn">Login</button> -->
+        <input type="submit" id="btn" value="Login">
+        <p>Forget password?</p>
+        <div id="showerr">
+           
         </div>
+        </div>
+    </form>
     </div>
+   
 
-    <div id="mobile-head">
-        <div id="mobiles">
-            <div id="mobile">
-                <div><img src="./images/project-logo.ico" alt=""></div>
-            <div><span>Get The App. Save More!</span><br>
-                <span></span><br>
-                <span>Get Flat 15% off only on the app! Use Code: KASVR</span><br>
-            </div>
-            </div>
-            <div>
-                <p id="close"><b>X</b></p>
-            </div>
-        </div>
-        <div>
-            <a href="https://tinyurl.com/4pwc8cr9">Download The App</a>
-        </div>
-        
-    </div>
-    <div id="side-bar">
-        <div id="user-css">
-            <div>
-                <div><img src="./images/user.png" alt=""></div>
-                <div><p>Login or Signup</p></div>
-            </div>
-            <div id="X"><span>X</span></div>
-        </div>
-
-        <div id="change-city">
-            <div >
-                <div>
-                    <img src="./images/icons8-location-50.png" alt="">
-                <span>Change City</span>
-                </div>
-            </div>
-            
-        </div>
-        <div>
-            <img src="./images/project-logo.ico" alt="">
-            <span>Become Host</span>
-        </div>
-        <div>
-           <img src="./images/icons8-documents-99.png" alt=""> 
-           <span>Zoomcar Fleet Vehicles Policies</span>
-        </div>
-        <div>
-            <img src="./images/icons8-documents-99.png" alt=""> 
-            <span>Zoomcar Fleet Vehicles Policies</span>
-         </div>
-         <div>
-            <img src="./images/icons8-phone-50.png" alt=""> 
-            <span>Help & Support<span>
-         </div>      
-        
-    </div>
+    <script src="./script/index.js"></script>
 </body>
 </html>
-<script src="./index.js"></script>
