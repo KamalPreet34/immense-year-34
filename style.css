@@ -1,109 +1,436 @@
+body{
+  padding: 0px;
+  margin: 0px;
+}
+
+#product-page{
+  display:flex;
+  margin-top:-13%;
+}
+#card-page{
+
+  display: flex;
+}
+
+
+#navbar{
+display: flex;
+justify-content: space-between;
+background-color: black;
+align-items: center;
+padding: 3px 50px 3px 30px;
+height:50px;
+margin-bottom:20px;
+
+}
+#project-logo{
+  width: 60px;
+  cursor: pointer;
+}
+#BookMyCar{
+  color: white;
+  font-style: italic;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#ham-burger-icon{
+width: 30px;
+cursor: pointer;
+}
+#left-bar{
+  display: flex;
+  align-items: center;
+  
+}
+#left-bar > div{
+margin-right: 20px;
+}
+
+#right-bar{
+  display: flex;
+  align-items: center;
+}
+#right-bar > div{
+margin-left: 30px;
+}
+
+#host-button{
+  padding-top: 5px;
+  font-size: 20px;
+  margin-left: 5px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+#login-signup-button{
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#host-img{
+  width: 30px;
+}
+
+#host-group{
+  display: flex;
+}
+#right-bar > div:nth-child(1){
+  background-color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  border-radius: 20px;
+}
+#mobile-head{
+  position: relative;
+  top: -90px;
+  background-color: rgb(22, 137, 33);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left:8px;
+  padding-right: 8px;
+}
+
+#mobiles{
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  width: 98%;
+}
+#mobile{
+  display: flex;
+  color: white;
+}
+#mobile img{
+  width: 40px;
+  margin-left: 20px;
+}
+#mobile span{
+  margin-left: 20px;
+}
+#mobile-head > div:nth-child(2){
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+#mobile-head a{
+  text-decoration: none;
+  color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#close{
+  width: 20px;
+  cursor: pointer;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#mobile-head{
+  visibility: hidden;
+}
+
+
+#side-bar{
+  background-color: white;
+  box-shadow: 0 60px 80px rgba(0,0,0,0.80), 0 45px 26px rgba(0,0,0,0.14);
+  width: 25%;
+  min-height: 850px;
+  position: absolute;
+  position: static;
+  position: fixed;
+  top: -20px;
+  visibility: hidden;
+}
+#change{
+  color: #168921;
+  align-items: center;
+}
+
+#side-bar img{
+  width: 30px;
+  margin-right: 20px;
+}
+#side-bar > div{
+  display: flex;   
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+  cursor: pointer;
+}
+#change-city{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#user-css{
+  background-color: rgb(225, 229, 233);    
+  justify-content: space-between;
+}
+#delhi-ncr{
+  color: rgb(22, 137, 33);
+}
+#user-css > :nth-child(1){
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#X{
+  color: rgb(22, 137, 33);
+  cursor: pointer;
+}
+
 #main{
-    width: 35%;
-    /* display: flex; */
-    padding:15px;
-    border: 1px solid #333;
-    
+  width: 25%;
+  /* display: flex; */
+  padding:15px;
+  border: 1px solid #333;
+  
 }
 
 
 
 #box1{
-    display: flex;
-    justify-content: space-between;
-   
+  display: flex;
+  justify-content: space-between;
+ 
 }
 
 #box1 > button{
-    border: none;
-    font-size: 15px;
-    font-weight: bold;
-    color: green;
-    background-color: white;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  color: green;
+  background-color: white;
 }
 
-#option{
-    display: grid;
-    grid-template-columns: repeat(4,20%);
-    grid-template-rows: 70px;
-    gap: 15px;
+#option {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: 70px;
+  gap: 5px;
+ 
 }
 #option img{
-    display: block;
-    margin: auto;
-    width: 40px;
-    height: 40px;
+  display: block;
+  margin: auto;
+  width: 40px;
+  height: 40px;
 }
 
 #option>div{
-    border: 1px solid #333;;
-    border-radius: 3%;
+  border: 1px solid #333;;
+  border-radius: 3%;
 }
 #option p{
-    text-align: center;
-    font-size: 14px;
+  text-align: center;
+  font-size: 10px;
 }
 
 .container-input {
-    position: relative;
-  }
-  
-  .input {
-    width: 150px;
-    padding: 10px 0px 10px 40px;
-    border-radius: 9999px;
-    border: solid 1px #333;
-    transition: all .2s ease-in-out;
-    outline: none;
-    opacity: 0.8;
-  }
-  
-  .container-input svg {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translate(0, -50%);
-  }
-  
-  .input:focus {
-    opacity: 1;
-    width: 250px;
-  }
-  #car {
-    display:flex;
-    align-items: center;
-    border-top: 1px solid black;
-    margin-bottom: -25px;
-    margin-top: 5px;
-  }
-  #car img{
-    width:25px;
-    height:25px;
-    margin-right: 10px;
-  }
- .container-input{
-    border-bottom: 1px solid black;
-    padding-bottom: 5px;
- }
- #car1 img{
-    display: block;
-    margin: auto;
-    width: 40px;
-    height: 40px;
- }
- #car1 {
-    display: grid;
-    grid-template-columns: repeat(4,20%);
-    grid-template-rows: 70px;
-    gap: 15px;
+  position: relative;
 }
-#car1 > div{
-    border: 1px solid #333;
-    border-radius: 3%;
+
+.input {
+  width: 150px;
+  padding: 10px 0px 10px 40px;
+  border-radius: 9999px;
+  border: solid 1px #333;
+  transition: all .2s ease-in-out;
+  outline: none;
+  opacity: 0.8;
 }
-#car2{
-    border: 1px solid red;
+
+.container-input svg {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0, -50%);
+}
+
+.input:focus {
+  opacity: 1;
+  width: 250px;
+}
+#car {
+  display:flex;
+  align-items: center;
+  border-top: 1px solid black;
+  margin-bottom: -25px;
+  margin-top: 5px;
+}
+#car img{
+  width:25px;
+  height:25px;
+  margin-right: 10px;
+}
+.container-input{
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+}
+#car1 img {
+  display: block;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+}
+#car1,#car2,#car3,#car4{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: 70px;
+  gap: 5px;
+  text-align:center;
+}
+#car1 > div, #car2 >div, #car3 >div, #car4 > div{
+  border: 1px solid #333;
+  border-radius: 3%;
+  text-decoration: none;
+  text-align: center;
 }
 
 
+#car1 a {
+text-decoration: none;
+
+}
+#car2 img{
+width:20px;
+
+}
+#product-page{
+  display:flex;
+  margin-top:-13%;
+}
+
+#car3 img{
+  width:20px;
+}
+#car2 img {
+  display: block;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+}
+#car3 img {
+  display: block;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+}
+
+
+#car4 img {
+  display: block;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  padding-top: 15px;
+}
+#car3 img{
+  width:20px;
+}
+#car-6 div{
+  border:2px solid red;
+  width:400px;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 20px;
  
+}
+#car-6{
+  display: flex;
+  justify-content: space-around;
+  width:1000px;
+  height:100px;
+
+}
+#car-6 > div {
+  border:2px solid black;
+width:400px;
+height:40px;
+padding:10px;
+ border-radius:3px;
+
+}
+li{
+  font-size:15px;
+  font-weight:200;
+}
+#calender{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#brand >div >a>img{
+width:40px;
+height:20px;
+
+}
+#brand{
+display:flex;
+justify-content: space-between;
+width:700px;
+margin-left: 100px;
+line-height:5px;
+}
+#brand >div >a{
+  text-decoration: none;
+
+}
+#car-id{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  text-align:center;
+  width:100%;
+  padding-left:30px;
+ 
+}
+#car-id img{
+  width:170%;
+  height:auto;
+  /* margin: auto; */
+  /* border: 2px solid red; */
+ margin-left: 0px;
+}
+#car{
+
+  width: 85%;
+  height:auto;
+  /* padding-left: 30px; */
+  display:grid;
+  grid-template-columns:repeat(2,1fr) ;
+/* border: 2px solid black; */
+/* margin: auto; */
+
+}
+
+#image {
+  margin-top: -40px;
+}
+
+
+
+@media only screen and (min-width: 500px) and (max-width: 1000px) {
+  #navbar{
+      visibility: hidden;
+  }
+  
+  #find-car-section{
+      margin-top:-25%;
+  }
+  #mobile-head{
+      visibility: visible;
+  }
+  #second-tag-line + h1 +h2 + div{
+      grid-template-columns: repeat(1,1fr);
+      width: 60%;    
+     }
+
+  }
