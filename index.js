@@ -17,6 +17,7 @@ let help = document.getElementById("help")
 let switch_tabs = document.querySelector("#about-us > div:nth-child(2)")
 let page = switch_tabs.innerHTML
 let change = document.getElementById("change")
+let form  = document.querySelector("form")
 
 
 ham_burger_botton.addEventListener("click",()=>{
@@ -48,20 +49,31 @@ more_than.addEventListener("click",()=>{
   slide_image.setAttribute("src",`./images/${count}.png`)
 })
 
-
-
+window.addEventListener("load",async ()=>{
   navigator.geolocation.getCurrentPosition((position) => {
-  let lat = position.coords.latitude;
-  let long = position.coords.longitude;
-  fetch(`https://geocode.maps.co/reverse?lat=${lat}&lon=${long}`)
-  .then(response => response.json())
-  .then(result => {
-    change.innerHTML = result.address.state
-    from.placeholder = result.display_name
-  })
+    let lat = position.coords.latitude;
+    let long = position.coords.longitude;
+    fetch(`https://geocode.maps.co/reverse?lat=${lat}&lon=${long}`)
+    .then(response => response.json())
+    .then(result => {
+      change.innerHTML = result.address.state
+      from.placeholder = result.display_name
+      })
+    });
+})
 
 
-  });
+
+  // navigator.geolocation.getCurrentPosition((position) => {
+  // let lat = position.coords.latitude;
+  // let long = position.coords.longitude;
+  // fetch(`https://geocode.maps.co/reverse?lat=${lat}&lon=${long}`)
+  // .then(response => response.json())
+  // .then(result => {
+  //   change.innerHTML = result.address.state
+  //   from.placeholder = result.display_name
+  //   })
+  // });
 
 
 
@@ -94,4 +106,21 @@ help.addEventListener("click",()=>{
   blog.style.borderBottom = "none"
   help.style.borderBottom = "solid 2px white"
   switch_tabs.innerHTML = `<div><h1> Find more information about Zoomcar Help and Support <a href="#">Here</a></div>`
+})
+
+
+
+
+form.addEventListener("submit",(e)=>{
+  e.preventDefault();
+
+    let month_from =  `${form.till.value[5]}${form.till.value[6]}`
+    let month_till=  `${form.to.value[5]}${form.to.value[6]}`
+    let day_from =  `${form.till.value[8]}${form.till.value[9]}`
+    let day_till=  `${form.to.value[8]}${form.to.value[9]}`
+    let month = (+month_from - +month_till) *30
+    let day = (+day_from - +day_till) *24
+    let hours = month+day
+    
+    localStorage.setItem("hours",JSON.stringify(hours))
 })

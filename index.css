@@ -237,12 +237,28 @@ form > div {
 #find-cars h2{
     font-family: Optima;
 }
-#from,#to{
+#from,#to,#till{
     width: 26.5%;
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 10px;
     text-align: center;
+}
+
+#to,#till{
+    width: 12%;
+    margin-left: -.5%;
+}
+
+#to{
+    border-right: none;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+#till{
+    border-left: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
 form span{
     color: #168921;
