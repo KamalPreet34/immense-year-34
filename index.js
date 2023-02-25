@@ -19,6 +19,11 @@ let page = switch_tabs.innerHTML
 let change = document.getElementById("change")
 let form  = document.querySelector("form")
 
+let host_button = document.getElementById("host-button")
+host_button.addEventListener("click",()=>{
+  location.href="Becomehost.html"
+})
+
 
 ham_burger_botton.addEventListener("click",()=>{
     side_bar.style.cursor = "pointers"

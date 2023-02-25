@@ -10,6 +10,10 @@ let hours = JSON.parse(localStorage.getItem("hours"))
 let from  = document.getElementById("from")
 let form  = document.querySelector("form")
 let locations = JSON.parse(localStorage.getItem("location"))
+let host_button = document.getElementById("host-button")
+host_button.addEventListener("click",()=>{
+  location.href="Becomehost.html"
+})
 
 let index_page = document.getElementById("project-logo");
 index_page.addEventListener("click",()=>{
@@ -48,7 +52,7 @@ function dom_data(params) {
   cards.innerHTML = ""
   params.forEach(element => {
     cards.innerHTML += `
-                             <div id="card">
+                             <div id="card" data-id="${element.id}">
                                 <div>
                                     <img src="${element.image}" alt="">
                                 </div>
@@ -78,12 +82,25 @@ function dom_data(params) {
 
                             </div>
     `
-    let card = document.querySelector("#card");
-    card.addEventListener("click",()=>{
-      location.href = "cartPage.html"
-      localStorage.setItem("data",JSON.stringify(element))
-    })
+    
   });
+  
+  let card = document.querySelectorAll("#card");
+  for (let i = 0 ; i < card.length;i++){
+    card[i].addEventListener("click",()=>{
+      
+      fetch(`${api}/${i+1}`)
+      .then((res)=> res.json())
+      .then((data)=>{
+        localStorage.setItem("data",JSON.stringify(data))            
+      })  
+
+      location.href = "cartPage.html"
+      
+    })
+
+  }
+
   
   
 }
