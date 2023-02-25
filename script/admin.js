@@ -8,8 +8,8 @@ window.addEventListener("load",()=>{
     fetchdata(url);
 });
 
-function  fetchdata(url){
-    fetch(url)
+function  fetchdata(){
+    fetch("https://crimson-clam-hose.cyclic.app/data")
     .then((res)=>{
         return res.json();
     })
@@ -55,8 +55,101 @@ function showdata(data){
 
         mainsection.append(maindiv);
 
+    });
+}
 
+// store data in server
 
+let form=document.getElementById("POSTform");
 
+form.addEventListener("submit",(event)=>{
+    event.preventDefault();
+
+    obj={
+        name:form.name.value,
+        image:form.image.value,
+        price:form.price.value,
+        seatcapacity:form.capacity.value,
+        fueltype:form.fuel.value,
+    }
+    console.log(obj);
+    addtoserver(obj);
+});
+
+function addtoserver(obj){
+
+    fetch("https://crimson-clam-hose.cyclic.app/data",{
+        method:"POST",
+        body: JSON.stringify(obj),
+        headers:{
+            "Content-type":"application/json"
+        }
+    })
+    .then((res)=>{
+        fetchdata("https://crimson-clam-hose.cyclic.app/data");
+        return res.json();
+        
+    })
+    // .then((data)=>{
+    //     console.log(data);
+        
+    // });
+
+}
+
+//delete data from server
+let form1=document.getElementById("DELETEform");
+
+form1.addEventListener("submit",(event)=>{
+    event.preventDefault();
+
+    let id=form1.id.value;
+   deletedata(id)
+});
+
+function deletedata(id){
+
+    fetch(`https://crimson-clam-hose.cyclic.app/data/${id}`,{
+        method:"DELETE",
+        headers:{
+            "Content-type":"application/json"
+        }
+    })
+    .then((res)=>{
+        fetchdata("https://crimson-clam-hose.cyclic.app/data");
+        return res.json();
+        
+    });
+}
+
+//update server data 
+
+let form2=document.getElementById("EDITform");
+
+form2.addEventListener("submit",(event)=>{
+    event.preventDefault();
+
+    let obj={
+        
+        price:form2.price.value
+    }
+    let id=form2.id.value;
+    console.log(obj);
+   update(id,obj);
+});
+
+function update(id,obj){
+
+    fetch(`https://crimson-clam-hose.cyclic.app/data/${id}`,{
+        method:"PATCH",
+        body: JSON.stringify(obj),
+        headers:{
+            "Content-type":"application/json"
+        }
+    })
+    .then((res)=>{
+        fetchdata("https://crimson-clam-hose.cyclic.app/data");
+        return res.json();
+        
     });
 }

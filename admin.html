@@ -76,10 +76,32 @@
 
             <div class="each_div">
                 <p> Product ID *</p>
-                <input type="text" class="each_input" id="name" placeholder="Enter Product ID">
+                <input type="number" class="each_input" id="id" placeholder="Enter Product ID">
             </div>
 
-            <input type="submit" id="submit_btn_POST" class="each_input">
+            <input type="submit" id="submit_btn_POST" class="each_input" value="DELETE">
+
+        </form>
+
+
+
+
+        
+        <form action="submit" id="EDITform">
+
+            <h1>Change Price</h1>
+
+            <div class="each_div">
+                <p> Product ID *</p>
+                <input type="number" class="each_input" id="id" placeholder="Enter Product id">
+            </div>
+
+            <div class="each_div">
+                <p> Product Price *</p>
+                <input type="number" class="each_input" id="price" placeholder="Enter Product Price">
+            </div>
+
+            <input type="submit" id="submit_btn_POST" class="each_input" value="CHANGE">
 
         </form>
     </div>
