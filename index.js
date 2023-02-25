@@ -58,24 +58,13 @@ window.addEventListener("load",async ()=>{
     .then(result => {
       change.innerHTML = result.address.state
       from.placeholder = result.display_name
+      localStorage.setItem("location",JSON.stringify(result.display_name))
       })
     });
+
+    form.till.value = "2023-03-24T00:11"
+    form.to.value = "2023-03-24T00:11"
 })
-
-
-
-  // navigator.geolocation.getCurrentPosition((position) => {
-  // let lat = position.coords.latitude;
-  // let long = position.coords.longitude;
-  // fetch(`https://geocode.maps.co/reverse?lat=${lat}&lon=${long}`)
-  // .then(response => response.json())
-  // .then(result => {
-  //   change.innerHTML = result.address.state
-  //   from.placeholder = result.display_name
-  //   })
-  // });
-
-
 
 
 about.addEventListener("click",()=>{
@@ -108,12 +97,8 @@ help.addEventListener("click",()=>{
   switch_tabs.innerHTML = `<div><h1> Find more information about Zoomcar Help and Support <a href="#">Here</a></div>`
 })
 
-
-
-
 form.addEventListener("submit",(e)=>{
   e.preventDefault();
-
     let month_from =  `${form.till.value[5]}${form.till.value[6]}`
     let month_till=  `${form.to.value[5]}${form.to.value[6]}`
     let day_from =  `${form.till.value[8]}${form.till.value[9]}`
@@ -121,6 +106,9 @@ form.addEventListener("submit",(e)=>{
     let month = (+month_from - +month_till) *30
     let day = (+day_from - +day_till) *24
     let hours = month+day
-    
+    console.log(form.to.value)
+    localStorage.setItem("start_date",JSON.stringify(form.to.value))
+    localStorage.setItem("end_date",JSON.stringify(form.till.value))
     localStorage.setItem("hours",JSON.stringify(hours))
+    location.href = "product.html";
 })
