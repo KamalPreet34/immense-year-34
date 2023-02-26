@@ -9,7 +9,7 @@ let more_than = document.getElementById("more-than")
 let count = 1
 let slide_image = document.getElementById("slide-image")
 let from  = document.getElementById("from")
-
+let login_signup_button = document.getElementById("login-signup-button")
 let about = document.getElementById("about")
 let blog = document.getElementById("blog")
 let career = document.getElementById("career")
@@ -24,6 +24,9 @@ host_button.addEventListener("click",()=>{
   location.href="Becomehost.html"
 })
 
+login_signup_button.addEventListener("click",()=>{
+  location.href="Register.html.html"
+})
 
 ham_burger_botton.addEventListener("click",()=>{
     side_bar.style.cursor = "pointers"

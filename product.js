@@ -257,10 +257,21 @@ function fetch_data(params){
       dom_data(filtered)
     })
     electricty.addEventListener("click",()=>{
-      let filtered = arr.filter((el)=>{return el.fueltype === "electricty"})
+      let filtered = arr.filter((el)=>{return el.fueltype === "electricity"})
       dom_data(filtered)
     })
-
+    four_seats.addEventListener("click",()=>{
+      let filtered = arr.filter((el)=>{return el.seatcapacity === "4"})
+      dom_data(filtered)
+    })
+    five_seats.addEventListener("click",()=>{
+      let filtered = arr.filter((el)=>{return el.seatcapacity === "5"})
+      dom_data(filtered)
+    })
+    seven_seats.addEventListener("click",()=>{
+      let filtered = arr.filter((el)=>{return el.seatcapacity === "7"})
+      dom_data(filtered)
+    })
 
     
     dom_data(data)
