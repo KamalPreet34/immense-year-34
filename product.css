@@ -198,12 +198,16 @@ cursor: pointer;
     overflow: auto;
     height: 1200px;
 }
+#XXX{
+    visibility: hidden;
+}
 #seats{
 display: grid;
 text-align:center ;
 grid-template-columns: repeat(3,1fr);
 margin-bottom: 10px;
 gap: 10px;
+cursor: pointer;
 }
 #Transmisson{
     display: grid;
@@ -215,6 +219,7 @@ gap: 10px;
 #Transmisson > div,#seats > div,#Ratings > span{
     border: solid .5px;
     padding: 10px;
+    cursor: pointer;
 }
 #Ratings > span{
     padding: 10px;
@@ -223,6 +228,7 @@ gap: 10px;
     width: 100%;
     margin-top: 50px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 #Ratings{
     display: grid;
@@ -402,6 +408,7 @@ form{
     text-align: center;
     gap:10px;
     grid-template-columns: repeat(4,1fr);
+    cursor: pointer;
     
 }
 #box > div {
