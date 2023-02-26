@@ -11,14 +11,12 @@ let from  = document.getElementById("from")
 let form  = document.querySelector("form")
 let locations = JSON.parse(localStorage.getItem("location"))
 let host_button = document.getElementById("host-button")
-let XX = document.getElementById("XX")
-let XXX = document.getElementById("XXX")
 let left = document.getElementById("left")
 let nine = document.getElementById("nine")
 let sort_by = document.getElementById("sort_by")
 let banner = document.getElementById("banner")
 let right = document.getElementById("right")
-let store = left.innerHTML
+
 
 
 // filters
@@ -81,27 +79,32 @@ let count = 0
 //   count++
 
 // })
+let store = left.innerHTML
+setInterval(() => {
 
-XX.addEventListener("click",()=>{
+let XX = document.getElementById("XX")
+let XXX = document.getElementById("XXX")
+  XX.addEventListener("click",()=>{
   
-  left.style.width = "10%"
-  sort_by.innerHTML = null
-  nine.innerHTML = null
-  right.style.width = "85%"
-  cards.style.gridTemplateColumns = "repeat(3,1fr)"
-  XXX.style.visibility = "visible"
-  XX.style.visibility = "hidden"
-})
-
-XXX.addEventListener("click",()=>{
-  XX.innerText = ">>"
-  left.style.width = "25%"
-  left.innerHTML = store
-  right.style.width = "65%"
-  cards.style.gridTemplateColumns = "repeat(2,1fr)"  
-  XXX.style.visibility = "hidden"
-  XX.style.visibility = "visible"
-})
+    left.style.width = "10%"
+    sort_by.innerHTML = null
+    nine.innerHTML = null
+    right.style.width = "85%"
+    cards.style.gridTemplateColumns = "repeat(3,1fr)"
+    XXX.style.visibility = "visible"
+    XX.style.visibility = "hidden"
+  })
+  
+  XXX.addEventListener("click",()=>{
+    XX.innerText = ">>"
+    left.style.width = "25%"
+    left.innerHTML = store
+    right.style.width = "65%"
+    cards.style.gridTemplateColumns = "repeat(2,1fr)"  
+    XXX.style.visibility = "hidden"
+    XX.style.visibility = "visible"
+  })
+}, 100);
 
 
 
@@ -282,8 +285,8 @@ function dom_data(params) {
   cards.innerHTML = ""
   params.forEach(element => {
     cards.innerHTML += `
-                             <div id="card" data-id="${element.id}">
-                                <div>
+                             <div id="card" >
+                                <div >
                                     <img src="${element.image}" alt="">
                                 </div>
                                 <div id="pad">
@@ -291,7 +294,7 @@ function dom_data(params) {
                                         <div>
                                             <img src="./images/icons8-star-filled-48.png" alt=""><span>${element.rating} (${Math.floor(Math.random() * 99)})</span>
                                         </div>
-                                        <img src="./images/cart.png" alt="">
+                                        <img  id="carts" data-id="${element.id}" src="./images/cart.png"  alt="">
                                     </div>
                                     <h1>${element.name} ${element.year}</h1>
                                     <p>Manual - ${element.fueltype} - ${element.seatcapacity} Seats</p>
@@ -316,16 +319,19 @@ function dom_data(params) {
   });
   
   let card = document.querySelectorAll("#card");
-  for (let i = 0 ; i < card.length;i++){
-    
-    card[i].addEventListener("click",()=>{
+  let carts = document.querySelectorAll("#carts");
+
+
+
+      for (let i = 0 ; i < carts.length;i++){
+    carts[i].addEventListener("click",(e)=>{
+      let a = e.target.attributes["data-id"].value
       
-      fetch(`${api}/${i+1}`)
+      fetch(`${api}/${a}`)
       .then((res)=> res.json())
       .then((data)=>{
         localStorage.setItem("data",JSON.stringify(data))            
-        window.location.replace(`./cartPage.html`)
-        
+        // window.location.replace(`./cartPage.html`)
       })  
       
     })
@@ -333,4 +339,20 @@ function dom_data(params) {
   }
   
 }
+
+//   for (let i = 0 ; i < card.length;i++){
+//     card[i].addEventListener("click",(e)=>{
+      
+//       fetch(`${api}/${i+1}`)
+//       .then((res)=> res.json())
+//       .then((data)=>{
+//         localStorage.setItem("data",JSON.stringify(data))            
+//         // window.location.replace(`./cartPage.html`)
+//       })  
+      
+//     })
+
+//   }
+  
+// }
 
