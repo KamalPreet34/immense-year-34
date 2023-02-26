@@ -328,7 +328,7 @@ function dom_data(params) {
   cards.innerHTML = ""
   params.forEach(element => {
     cards.innerHTML += `
-                             <div id="card" data-id="${element.id}">
+                             <div id="card">
                                 <div>
                                     <img src="${element.image}" alt="">
                                 </div>
@@ -337,7 +337,7 @@ function dom_data(params) {
                                         <div>
                                             <img src="./images/icons8-star-filled-48.png" alt=""><span>${element.rating} (${Math.floor(Math.random() * 99)})</span>
                                         </div>
-                                        <img src="./images/cart.png" alt="">
+                                        <img id="carts" data-id="${element.id}" src="./images/cart.png" alt="">
                                     </div>
                                     <h1>${element.name} ${element.year}</h1>
                                     <p>Manual - ${element.fueltype} - ${element.seatcapacity} Seats</p>
@@ -361,12 +361,13 @@ function dom_data(params) {
     
   });
   
-  let card = document.querySelectorAll("#card");
+  let card = document.querySelectorAll("#carts");
   for (let i = 0 ; i < card.length;i++){
     
-    card[i].addEventListener("click",()=>{
+    card[i].addEventListener("click",(e)=>{
+      let a=e.target.attributes["data-id"].value
        if (localStorage.getItem("Name")) {
-         fetch(`${api}/${i + 1}`)
+         fetch(`${api}/${a}`)
            .then((res) => res.json())
            .then((data) => {
              localStorage.setItem("data", JSON.stringify(data));
