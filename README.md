@@ -13,8 +13,11 @@ Rinkesh              :-  fp09_014   :-Member
 Vishal  Gupta     :-   fw22_0978 :-Member
 
 Kamal Preet Kaur Me as a team leader worked and managed all the things running behind this project. I worked on the Product page for different categories and logical parts, sorting filtering parts. Contributed to the whole project with ideas.
+
 Sambhaji  Dhore Me as a team member worked on JSON server creation, deploying and hardcoding data to make a beautiful API for our Project. I was working on the admin side for adding and deleting the data form the server form admin only and Payment page also.Helped in the member tasks.
+
 Akhtar Ansari Me as a team member worked on Navbar,landing page and improving again and again as per requirements.Contributed to the whole project with ideas.Helped in other members tasks.
+
 Rinkesh  Me as a team member worked on Login signup and checkout and cart page. I found bugs and improved.Contributed the whole Project with ideas.
 Vishal Me as Team member worked on the home-page and I also tested many times and found bugs improved.Contributed the whole project with ideas. 
 
