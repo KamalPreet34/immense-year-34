@@ -19,6 +19,8 @@ Sambhaji  Dhore Me as a team member worked on JSON server creation, deploying an
 Akhtar Ansari Me as a team member worked on Navbar,landing page and improving again and again as per requirements.Contributed to the whole project with ideas.Helped in other members tasks.
 
 Rinkesh  Me as a team member worked on Login signup and checkout and cart page. I found bugs and improved.Contributed the whole Project with ideas.
+
+
 Vishal Me as Team member worked on the home-page and I also tested many times and found bugs improved.Contributed the whole project with ideas. 
 
 
